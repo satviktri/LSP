@@ -1,0 +1,45 @@
+You are an expert prompt engineer. Convert the following task prompt into a Logic Sketch Prompting (LSP) specification.
+
+Requirements:
+1. Extract binary conditions (yes/no questions) only.
+2. Assign clear variable names (snake_case).
+3. Construct a deterministic decision rule using AND / OR / NOT.
+4. Return strict JSON only (no extra text).
+5. Include exactly one positive and one negative example.
+
+Output JSON schema:
+{
+  "task_summary": "...",
+  "variables": [
+    {"name": "...", "type": "bool", "description": "..."}
+  ],
+  "binary_conditions": [
+    {"name": "...", "question": "..."}
+  ],
+  "decision_rule": {
+    "all": ["..."],
+    "any": ["..."],
+    "not": ["..."]
+  },
+  "positive_example": {
+    "input": {"...": true},
+    "output": {
+      "label": "POSITIVE",
+      "triggered_conditions": ["..."],
+      "decision_trace": ["ALL: ...", "ANY: ...", "NOT: ..."]
+    }
+  },
+  "negative_example": {
+    "input": {"...": false},
+    "output": {
+      "label": "NEGATIVE",
+      "triggered_conditions": ["..."],
+      "decision_trace": ["ALL: ...", "ANY: ...", "NOT: ..."]
+    }
+  }
+}
+
+Prompt to convert:
+"""
+{prompt}
+"""
