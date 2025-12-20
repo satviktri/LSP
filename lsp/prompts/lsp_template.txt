@@ -1,0 +1,20 @@
+You are using Logic Sketch Prompting (LSP).
+
+Task:
+{task_description}
+
+Variables (typed):
+{variables}
+
+Binary Conditions (yes/no):
+{binary_conditions}
+
+Decision Rule:
+{decision_rule}
+
+Output JSON (strict):
+{
+  "label": "<FINAL_LABEL>",
+  "triggered_conditions": ["<condition_name>", "..."],
+  "decision_trace": ["ALL: ...", "ANY: ...", "NOT: ..."]
+}
