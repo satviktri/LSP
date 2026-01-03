@@ -4,6 +4,8 @@ Logic Sketch Prompting (LSP) is a lightweight, deterministic prompting methodolo
 
 This repository is a minimal, CPU-only reference implementation and teaching resource. It provides a small logic engine, clear examples, and a reusable meta-prompt that converts arbitrary prompts into LSP format. There are no model calls, datasets, or external downloads required.
 
+![LSP Figure](lsp_fig1.png)
+
 ## Core Components
 
 - **Typed variables**: named, structured inputs that capture the relevant facts for a task.
